@@ -5,7 +5,6 @@ A personal price-drop tracker. You can paste in a product URL and the website ch
 ## Build phases
 
 ### Phase 1 - Frontend Only (Mock data)
-- Build out a dashboard of watched products as cards, each witha. mock price history chart
+- Build out a dashboard of watched products as cards, each with a mock price history chart
 - Form to add a product (stored in local data)
 - Target price input
-- Add a price history line graph
