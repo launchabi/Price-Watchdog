@@ -6,11 +6,25 @@ export default function ProductCard({ product, onCheckNow, onDelete }) {
             <div className="product-card-header">
                 <p>{name}</p>
                 <p>
+                    Target Price:{" "}
                     {typeof targetPrice === "number"
                         ? `$${targetPrice.toFixed(2)}`
                         : "-"}
                 </p>
-                
+
+                <p>
+                    Current Price:{" "}
+                    {typeof currentPrice === "number"
+                        ? `$${currentPrice.toFixed(2)}`
+                        : "-"}
+                </p>
+            </div>
+
+            <div className="product-card-footer">
+                <button type="button" onClick={() => onCheckNow(id)}>
+                    Check Now
+                </button>
+
                 <button
                     className="icon-button"
                     type="button"
@@ -20,17 +34,6 @@ export default function ProductCard({ product, onCheckNow, onDelete }) {
                     aria-label={`Remove ${name} from Product List`}
                 >
                     Delete
-                </button>
-            </div>
-
-            <div className="product-card-footer">
-                <p>
-                    {typeof currentPrice === "number"
-                        ? `$${currentPrice.toFixed(2)}`
-                        : "-"}
-                </p>
-                <button type="button" onClick={() => onCheckNow(id)}>
-                    Check Now
                 </button>
             </div>
         </div>
