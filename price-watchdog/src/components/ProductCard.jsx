@@ -1,3 +1,5 @@
+import '../styling/ProductCard.css'
+
 export default function ProductCard({ product, onCheckNow, onDelete }) {
     const { id, name, currentPrice, targetPrice } = product;
 
