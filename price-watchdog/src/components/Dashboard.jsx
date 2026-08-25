@@ -10,16 +10,16 @@ export default function Dashboard() {
     };
 
     const handleDelete = (id) => {
-        setProducts((p) => {
-            p.filter(
-                (product) => product.id !== id
-            );
-        });
+        setProducts((p) => p.filter((product) => product.id != id));
     };
 
     return (
         <div className="dashboard">
-            <ProductList products={products} onCheckNow={handleCheckNow} onDelete={handleDelete}></ProductList>
+            <ProductList
+                products={products}
+                onCheckNow={handleCheckNow}
+                onDelete={handleDelete}
+            ></ProductList>
         </div>
     );
 }
