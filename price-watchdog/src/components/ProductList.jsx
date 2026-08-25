@@ -7,14 +7,14 @@ export default function ProductList({ products, onCheckNow, onDelete }) {
 
     return (
         <div className="product-list">
-            {products.map((product) => {
+            {products.map((product) => (
                 <ProductCard
                     key={product.id}
                     product={product}
                     onCheckNow={onCheckNow}
                     onDelete={onDelete}
-                />;
-            })}
+                />
+            ))}
         </div>
     );
 }
