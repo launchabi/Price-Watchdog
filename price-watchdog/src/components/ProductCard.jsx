@@ -49,7 +49,6 @@ function LinkButton({ productURL }) {
         <a 
             href={productURL} 
             target="_blank" 
-            rel="noopener noreferrer"
             className="click-button"
         >
             Product URL
