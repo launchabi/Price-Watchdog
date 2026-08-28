@@ -1,4 +1,4 @@
-import '../styling/ProductCard.css'
+import "../styling/ProductCard.css";
 
 export default function ProductCard({ product, onCheckNow, onDelete }) {
     const { id, name, currentPrice, targetPrice } = product;
@@ -23,12 +23,14 @@ export default function ProductCard({ product, onCheckNow, onDelete }) {
             </div>
 
             <div className="product-card-footer">
-                <button type="button" onClick={() => onCheckNow(id)}>
+                <button className="click-button" type="button" onClick={() => onCheckNow(id)}>
                     Check Now
                 </button>
 
+                <LinkButton productURL={product.url}/>
+
                 <button
-                    className="icon-button"
+                    className="click-button icon-button"
                     type="button"
                     onClick={() => {
                         onDelete(id);
@@ -39,5 +41,18 @@ export default function ProductCard({ product, onCheckNow, onDelete }) {
                 </button>
             </div>
         </div>
+    );
+}
+
+function LinkButton({ productURL }) {
+    return (
+        <a 
+            href={productURL} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="click-button"
+        >
+            Product URL
+        </a>
     );
 }
