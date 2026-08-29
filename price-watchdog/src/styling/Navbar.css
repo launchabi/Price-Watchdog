@@ -8,8 +8,16 @@
     text-align: center;
 }
 
-.links > h3 {
-    display: inline;
+.links > a {
+    display: inline-block;
     text-align: center;
     padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.17rem;
+    font-weight: bold;
+}
+
+.links > a:hover {
+    text-decoration: underline;
 }
