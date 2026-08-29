@@ -1,10 +1,14 @@
-import './App.css'
+import "./App.css";
+import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
 
 function App() {
-
-  return (
-    <h1>Hello from Launchcode!</h1>
-  )
+    return (
+        <>
+            <Navbar />
+            <Dashboard />
+        </>
+    );
 }
 
-export default App
+export default App;
