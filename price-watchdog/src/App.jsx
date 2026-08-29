@@ -1,12 +1,14 @@
 import "./App.css";
-import Dashboard from "./components/Dashboard";
+// import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home"
 
 function App() {
     return (
         <>
             <Navbar />
-            <Dashboard />
+            <Home />
+            {/* <Dashboard /> */}
         </>
     );
 }
