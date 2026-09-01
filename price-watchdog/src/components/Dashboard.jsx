@@ -11,10 +11,6 @@ export default function Dashboard() {
     const [targetPrice, setTargetPrice] = useState("");
     const [url, setURL] = useState("");
 
-    const handleCheckNow = (id) => {
-        console.log("Checking price for product id: #", id);
-    };
-
     const handleDelete = (id) => {
         setProducts((p) => p.filter((product) => product.id != id));
     };
@@ -54,7 +50,6 @@ export default function Dashboard() {
             <div className="dashboard">
                 <ProductList
                     products={products}
-                    onCheckNow={handleCheckNow}
                     onDelete={handleDelete}
                 ></ProductList>
             </div>
