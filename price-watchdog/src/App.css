@@ -1,0 +1,15 @@
+footer {
+    color: white;
+    display: flex;
+    min-height: 10dvh;
+    flex-direction: column;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+a:visited, a:hover a:active { 
+    color: inherit;
+    text-decoration: none;
+}
+

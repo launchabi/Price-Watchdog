@@ -1,15 +1,10 @@
-.product-card-list {
-    display: grid;
-}
-
 .product-card {
+    display: grid;
     position: relative;
     background: #ffffff;
     border: 1px solid #e8e6e1;
     border-radius: 16px;
     padding: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
     transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -52,6 +47,8 @@
 
 .product-card-footer {
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;

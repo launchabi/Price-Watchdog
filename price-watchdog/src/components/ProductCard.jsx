@@ -1,6 +1,6 @@
 import "../styling/ProductCard.css";
 
-export default function ProductCard({ product, onCheckNow, onDelete }) {
+export default function ProductCard({ product, onDelete }) {
     const { id, name, currentPrice, targetPrice } = product;
 
     return (
@@ -23,10 +23,6 @@ export default function ProductCard({ product, onCheckNow, onDelete }) {
             </div>
 
             <div className="product-card-footer">
-                <button className="click-button" type="button" onClick={() => onCheckNow(id)}>
-                    Check Now
-                </button>
-
                 <LinkButton productURL={product.url}/>
 
                 <button

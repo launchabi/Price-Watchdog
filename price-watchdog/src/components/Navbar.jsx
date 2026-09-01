@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import "../styling/Navbar.css";
 
 export default function Navbar() {
     return (
-        <>
+        <header>
             <h1 className="title">Price Watchdog</h1>
             <div className="links">
-                <h3>Home</h3>
-                <h3>Dashboard</h3>
-                <h3>About</h3>
+                <Link to="/">Home</Link>
+                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/about">About</Link>
             </div>
-        </>
+        </header>
     );
 }

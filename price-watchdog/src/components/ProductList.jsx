@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 
-export default function ProductList({ products, onCheckNow, onDelete }) {
+export default function ProductList({ products, onDelete }) {
     if (products.length === 0) {
         return <p>No Products tracked -- Add one to start tracking</p>;
     }
@@ -11,7 +11,6 @@ export default function ProductList({ products, onCheckNow, onDelete }) {
                 <ProductCard
                     key={product.id}
                     product={product}
-                    onCheckNow={onCheckNow}
                     onDelete={onDelete}
                 />
             ))}
