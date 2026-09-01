@@ -6,16 +6,11 @@ export default function About() {
             <h2>About Price Watchdog</h2>
 
             <section className="home-heading">
-                <p>
-                    Price Watchdog is a personal price-drop tracker. Paste a
-                    product URL, set the price you're willing to pay, and let us
-                    keep an eye on it for you.
-                </p>
-
-                <p>
-                    We check prices for you so you never overpay again. When a
-                    price drops to your target, you'll be the first to know.
-                </p>
+                <ol>
+                    <li>Price Watchdog will never track and collect data to sell to third party companies</li>
+                    <li>Price Watchdog will check prices for you everyday so you never have to do it</li>
+                    <li>Use us and never overpay again</li>
+                </ol>
             </section>
 
             <section>

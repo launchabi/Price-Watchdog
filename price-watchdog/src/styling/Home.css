@@ -6,7 +6,7 @@
   text-color: black;
 }
 
-.home h2 {
+.home > h2 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -17,11 +17,13 @@
   margin-bottom: 2.5rem;
 }
 
-.home-heading p {
-  font-size: 1.125rem;
+
+.home-heading > ol {
+  font-size: 1.15rem;
   color: #000000;
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .features-list {

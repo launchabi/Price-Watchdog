@@ -1,8 +1,5 @@
-.product-card-list {
-    display: grid;
-}
-
 .product-card {
+    display: grid;
     position: relative;
     background: #ffffff;
     border: 1px solid #e8e6e1;
