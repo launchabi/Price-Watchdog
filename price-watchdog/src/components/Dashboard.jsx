@@ -31,7 +31,8 @@ export default function Dashboard() {
         closeForm();
     };
 
-    const handleDone = () => {
+    const handleDone = (e) => {
+        e.preventDefault() // stops browser from reloading and losing added cards
         const product = {
             id: Date.now(),
             name: name,
@@ -60,13 +61,14 @@ export default function Dashboard() {
 
             {isFormOpen && (
                 <div className="modal-overlay">
-                    <div className="modal-content">
+                    <form className="modal-content" onSubmit={handleDone}>
                         <h2>Add a Product</h2>
                         <input
                             type="text"
                             placeholder="Product Name"
                             value={name}
                             onChange={(n) => setName(n.target.value)}
+                            required
                         />
 
                         <input
@@ -74,6 +76,7 @@ export default function Dashboard() {
                             placeholder="Target Price"
                             value={targetPrice}
                             onChange={(n) => setTargetPrice(n.target.value)}
+                            required
                         />
 
                         <input
@@ -81,28 +84,31 @@ export default function Dashboard() {
                             placeholder="Current Price"
                             value={currentPrice}
                             onChange={(n) => setCurrentPrice(n.target.value)}
+                            required
                         />
 
                         <input
-                            type="text"
-                            placeholder="Product URL"
+                            type="url"
+                            placeholder="Product URL | include https://"
                             value={url}
                             onChange={(n) => setURL(n.target.value)}
+                            required
                         />
-                        <button onClick={handleDone}>Done</button>
+                        <button onSubmit={handleDone}>Done</button>
 
                         <button
+                            type="button"
                             className="cancel-button"
                             onClick={handleCancel}
                         >
                             Cancel
                         </button>
-                    </div>
+                    </form>
                 </div>
             )}
 
             <button
-                className="add-items-btn"
+                className="add-items-button"
                 onClick={() => setIsFormOpen(true)}
             >
                 + Add Items
