@@ -19,22 +19,34 @@ export default function Dashboard() {
         setProducts((p) => p.filter((product) => product.id != id));
     };
 
+    const closeForm = () => {
+        setName("");
+        setCurrentPrice("");
+        setTargetPrice("");
+        setURL("");
+        setIsFormOpen(false);
+    };
+
+    const handleCancel = () => {
+        closeForm();
+    };
+
     const handleDone = () => {
-      const product = {
-          id: Date.now(),      
-          name: name,                                                      
-          currentPrice: Number(currentPrice),
-          targetPrice: targetPrice === "" ? null : Number(targetPrice),
-          url: url,
-      };
-      setProducts((p) => [...p, product]);
-  
-      setName("");             
-      setCurrentPrice("");                                                 
-      setTargetPrice("");
-      setURL("");
-      setIsFormOpen(false);
-  };
+        const product = {
+            id: Date.now(),
+            name: name,
+            currentPrice: Number(currentPrice),
+            targetPrice: targetPrice === "" ? null : Number(targetPrice),
+            url: url,
+        };
+        setProducts((p) => [...p, product]);
+
+        setName("");
+        setCurrentPrice("");
+        setTargetPrice("");
+        setURL("");
+        setIsFormOpen(false);
+    };
 
     return (
         <>
@@ -77,14 +89,24 @@ export default function Dashboard() {
                             value={url}
                             onChange={(n) => setURL(n.target.value)}
                         />
-                        <button onClick={handleDone}>
-                            Done
+                        <button onClick={handleDone}>Done</button>
+
+                        <button
+                            className="cancel-button"
+                            onClick={handleCancel}
+                        >
+                            Cancel
                         </button>
                     </div>
                 </div>
             )}
 
-            <button className ="add-items-btn" onClick={() => setIsFormOpen(true)}>+ Add Items</button>
+            <button
+                className="add-items-btn"
+                onClick={() => setIsFormOpen(true)}
+            >
+                + Add Items
+            </button>
         </>
     );
 }
